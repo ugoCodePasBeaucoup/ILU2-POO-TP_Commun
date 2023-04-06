@@ -1,9 +1,13 @@
 package model;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import model.reservation.Reservation;
+import model.reservation.ReservationRestaurant;
 
 class ReservationRestaurantTest {
 	static ReservationRestaurant reservation;
@@ -11,8 +15,8 @@ class ReservationRestaurantTest {
 	static final int NUM_SERVICE = 1;
 	static final int JOUR = 10;
 	static final int MOIS = 12;
-	static final String MESSAGE_RESA_1 = "Le 10/12 : table n°2 pour le premier service.\n";
-	static final String MESSAGE_RESA_2 = "Le 14/12 : table n°3 pour le deuxième service.\n";
+	static final String MESSAGE_RESA_1 = "Le 10/12 : table nÂ°2 pour le premier service.\n";
+	static final String MESSAGE_RESA_2 = "Le 14/12 : table nÂ°3 pour le deuxieme service.\n";
 
 	@BeforeAll
 	static void setUpBeforeClass() {

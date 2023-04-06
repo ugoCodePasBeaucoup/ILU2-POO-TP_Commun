@@ -1,4 +1,4 @@
-package model;
+package model.reservation;
 
 public abstract class Reservation {
 	protected int jour;

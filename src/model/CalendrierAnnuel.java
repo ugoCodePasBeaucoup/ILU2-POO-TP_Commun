@@ -29,7 +29,7 @@ public class CalendrierAnnuel {
 		try {
 			calendrier[mois - 1].reserver(jour);
 			return true;
-		} catch (IndexOutOfBoundsException e) {
+		} catch (IllegalStateException e) {
 			e.getMessage();
 			return false;
 		}
@@ -49,7 +49,7 @@ public class CalendrierAnnuel {
 		}
 
 		private boolean estLibre(int jour) throws IndexOutOfBoundsException {
-			if (jour < 1 || jour >= jours.length)
+			if (jour < 1 || jour > jours.length)
 				throw new IndexOutOfBoundsException();
 			return !jours[jour - 1];
 		}
